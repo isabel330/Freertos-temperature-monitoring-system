@@ -1,0 +1,14 @@
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+temp_logger_freertos\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+temp_logger_freertos\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+temp_logger_freertos\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1/portmacro.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+temp_logger_freertos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
