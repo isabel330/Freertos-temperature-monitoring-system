@@ -39,5 +39,4 @@ and triggers an alarm when a threshold is exceeded and alarm clears below a lowe
 
 ### Host Visualization
 ```bash
-pip install -r requirements.txt
-python plot_temperature.py
+python temperature_plot1.py
