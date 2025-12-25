@@ -5,6 +5,12 @@ The system periodically samples temperature data via I2C through LM75, buffers r
 and triggers an alarm when a threshold is exceeded and alarm clears below a lower threshold. Buffered data is streamed to a host PC via UART and visualized in real time using Python.
 
 ---
+## Bare-metal vs FreeRTOS Implementation
+
+This project was first implemented as a bare-metal firmware using interrupts.
+It was later redesigned using FreeRTOS to separate sensing, alarm handling,
+and communication into independent tasks.
+---
 
 ## System Architecture
 
