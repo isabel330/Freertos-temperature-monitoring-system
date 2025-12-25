@@ -6,10 +6,10 @@ and triggers an alarm when a threshold is exceeded and alarm clears below a lowe
 
 ---
 ## Bare-metal vs FreeRTOS Implementation
-
 This project was first implemented as a bare-metal firmware using interrupts.
 It was later redesigned using FreeRTOS to separate sensing, alarm handling,
 and communication into independent tasks.
+
 ---
 
 ## System Architecture
