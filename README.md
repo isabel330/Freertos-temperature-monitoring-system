@@ -2,7 +2,7 @@
 
 A real-time temperature monitoring system built on **STM32F746ZG** using **FreeRTOS**.
 The system periodically samples temperature data via I2C through LM75, buffers recent measurements,
-and triggers an alarm when a threshold is exceeded and alarm clears below a lower threshold. Buffered data is streamed to a host PC via UART and visualized in real time using Python.
+and triggers an alarm when a threshold is exceeded and alarm clears below a lower threshold. Buffered data is streamed to a host PC via UART and visualized in real time using Python. And an watchdog (IWDG) is integrated to improve system reliability.
 
 ---
 ## Bare-metal vs FreeRTOS Implementation
