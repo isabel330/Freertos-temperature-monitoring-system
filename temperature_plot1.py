@@ -3,45 +3,33 @@ import matplotlib
 matplotlib.use('TkAgg')  # ensures plot window works on Windows
 import matplotlib.pyplot as plt
 
-# -----------------------------
-# CONFIGURE SERIAL PORT
-# -----------------------------
-COM_PORT = 'COM3'       # set your STM32 COM port
-BAUD_RATE = 115200
+COM_PORT = 'COM3'       # STM32 COM port on PC
+BAUD_RATE = 9600
 TIMEOUT = 1             # seconds
 
 ser = serial.Serial(COM_PORT, BAUD_RATE, timeout=TIMEOUT)
 
-# -----------------------------
-# PARAMETERS
-# -----------------------------
-BUFFER_LEN = 60          # store up to 60 readings
+BUFFER_LEN = 60    
 buffer = []
 
-# -----------------------------
-# READ SERIAL DATA
-# -----------------------------
-print("Reading temperatures... waiting for alarm > 28°C")
+print("Reading temperatures... waiting for alarm")
 
 while True:
     line = ser.readline().decode(errors='ignore').strip()
     
-    # skip empty lines
-    if line == '':
+    if line == '': # skip empty lines
         continue
 
     temp = float(line)
     buffer.append(temp)
 
-    # keep only the last BUFFER_LEN readings
     if len(buffer) > BUFFER_LEN:
         buffer.pop(0)
 
     print(f"Temp: {temp:.2f} °C")
 
-    # Trigger alarm plot if temp > 28
-    if temp > 28.0:
-        print("\n=== ALARM TRIGGERED! Plotting last readings ===")
+    if temp > 28.0:     # Trigger  plot if temp > 28
+        print("\n ALARM TRIGGERED!")
 
         plt.figure(figsize=(8,4))
         plt.plot(buffer, marker='o')
@@ -57,3 +45,5 @@ while True:
 
 # close serial port
 ser.close()
+
+
